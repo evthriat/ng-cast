@@ -2,8 +2,8 @@
   <div class="media-left">
     <img class="media-object" src="https://i.ytimg.com/vi/1w8Z0UOXVaY/default.jpg" />
   </div>
-  <div class="media-body">
-    <div class="video-list-entry-title">{{ snippet }}</div>
-    <div class="video-list-entry-detail">{{ video.snippet.description }}</div>
+  <div class="media-body" video="$ctrl.video">
+    <div class="video-list-entry-title"> {{ video.snippet.title }} </div>
+    <div class="video-list-entry-detail">  </div>
   </div>
 </li>
