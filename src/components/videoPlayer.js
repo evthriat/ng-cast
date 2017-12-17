@@ -1,15 +1,19 @@
 angular.module('video-player')
 
+
+.controller('videoController', function($sce) {
+  this.youtube = () => {
+    return this.currentvideo ? $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + this.currentvideo.id.videoId) : '';
+  };
+
+})
 .component('videoPlayer', {
   bindings: {
     currentvideo: '<',
-    videourl: '<'
   },
-  controller: function($sce) {
-    this.youtube = () => $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + this.currentvideo.id.videoId);
-  },
-
+  controller: 'videoController',
   templateUrl: 'src/templates/videoPlayer.html'
+
   
   // TODO
 });

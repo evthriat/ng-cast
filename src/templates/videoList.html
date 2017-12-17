@@ -1,3 +1,8 @@
 <ul class="video-list">
-  <video-list-entry ng-repeat="video in $ctrl.data" video="video" index="$index" ng-click="$ctrl.changevideo($index)" ><h5><em> videoListEntry </em> another component goes here</h5></video-list-entry>
+  <video-list-entry 
+      ng-repeat="video in $ctrl.videos" 
+      video="video" 
+      index="$index" 
+      ng-click="$ctrl.changevideo(video)" 
+    ></video-list-entry>
 </ul>
